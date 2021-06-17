@@ -41,6 +41,7 @@ li {
 .navbar {
     width: 70%;
     text-align: left;
+    vertical-align: middle;
     color: #025157;
     font: sans-serif;
     height: 45px;
@@ -50,6 +51,8 @@ li {
     width: 15%;
     text-align: left;
     font-size: 14px;
+    vertical-align: middle;
+
 }
 
 .actions>* {
