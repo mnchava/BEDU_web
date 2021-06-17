@@ -40,10 +40,25 @@ li {
     width: 70%;
     text-align: left;
     color: #025157;
+    font: sans-serif;
+    height: 45px;
 }
 
 .actions {
     width: 15%;
     text-align: left;
     font-size: 14px;
+    margin: auto 10px;
+}
+
+.login {
+    color: #67b54b;
+}
+
+.trial {
+    color: white;
+    background-color: #67b54b;
+    padding: 12px 14px;
+    border-radius: 5px;
+    border-width: 0;
 }
