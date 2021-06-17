@@ -17,10 +17,13 @@ li {
 }
 
 .actions {
-
+    width: 15%;
+    text-align: right;
+    font-size: 14pt;
 }
 
 .navbar {
     width: 70%;
     color: green;
+    vertical-align: middle;
 }
