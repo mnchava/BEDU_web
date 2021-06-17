@@ -1,5 +1,23 @@
+h1 {
+    color: #46484c;
+    text-align: center;
+}
+
+p {
+    color: #8b8b8bcc;
+    font-family: verdana;
+    font-size: 20px;
+}
+
+button {
+    color: #fff;
+    background-color: #025157;
+}
+
 .header {
     margin: 40px 20px 0px 20px;
+    font-size: 0;
+    line-height: 45px;
 }
 
 li {
@@ -8,42 +26,24 @@ li {
 
 .header>* {
     display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+    height: 100%;
+    line-height: 45px;
 }
 
 .logo {
     width: 15%;
 }
 
+.navbar {
+    width: 70%;
+    text-align: center;
+    color: green;
+}
+
 .actions {
     width: 15%;
     text-align: right;
-    font-size: 14pt;
-}
-
-.navbar {
-    width: 70%;
-    color: green;
-    vertical-align: middle;
-    text-align: center;
-}
-
-h1 {
-    color: #025157;
-}
-
-b {
-    color: #aa0000;
-}
-
-p {
-    color: #8b8b8bcc;
-}
-
-button {
-    color: #fff;
-    background-color: #025157;
-}
-
-html {
-    background-color: #fffbf7;
+    font-size: 14px;
 }
