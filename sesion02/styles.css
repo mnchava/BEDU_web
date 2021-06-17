@@ -1,7 +1,5 @@
 .header {
-    margin-top: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 40px 20px 0px 20px;
 }
 
 li {
@@ -26,4 +24,5 @@ li {
     width: 70%;
     color: green;
     vertical-align: middle;
+    text-align: center;
 }
