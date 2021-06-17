@@ -6,7 +6,7 @@ li {
     display: inline;
 }
 
-.header > * {
+.header>* {
     display: inline-block;
 }
 
@@ -25,4 +25,25 @@ li {
     color: green;
     vertical-align: middle;
     text-align: center;
+}
+
+h1 {
+    color: #025157;
+}
+
+b {
+    color: #aa0000;
+}
+
+p {
+    color: #8b8b8bcc;
+}
+
+button {
+    color: #fff;
+    background-color: #025157;
+}
+
+html {
+    background-color: #fffbf7;
 }
