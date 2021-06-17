@@ -18,6 +18,8 @@ button {
     margin: 40px 20px 0px 20px;
     font-size: 0;
     line-height: 45px;
+    font: sans-serif;
+    height: 45px;
 }
 
 li {
@@ -40,25 +42,27 @@ li {
     width: 70%;
     text-align: left;
     color: #025157;
-    font: sans-serif;
-    height: 45px;
 }
 
 .actions {
     width: 15%;
     text-align: left;
     font-size: 14px;
-    margin: auto 10px;
 }
 
-.login {
+.actions>* {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.actions a {
     color: #67b54b;
 }
 
-.trial {
+.actions button {
     color: white;
     background-color: #67b54b;
     padding: 12px 14px;
+    border: 0;
     border-radius: 5px;
-    border-width: 0;
 }
