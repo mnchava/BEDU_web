@@ -16,10 +16,11 @@ li {
     width: 15%;
 }
 
-/* .actions {
+.actions {
 
 }
 
 .navbar {
-
-} */
+    width: 70%;
+    color: green;
+}
