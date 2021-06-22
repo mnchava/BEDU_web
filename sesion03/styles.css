@@ -1,95 +1,112 @@
 h1 {
-  color: #46484c;
-  text-align: center;
+	color: #46484c;
+	text-align: center;
 }
 
 p {
-  color: #8b8b8bcc;
-  font-family: verdana;
-  font-size: 20px;
+	color: #8b8b8bcc;
+	font-family: verdana;
+	font-size: 20px;
 }
 
 button {
-  color: #fff;
-  background-color: #025157;
+	color: #fff;
+	background-color: #025157;
 }
 
 .header {
-  margin: 40px 20px 0px 20px;
-  font-size: 0;
-  line-height: 45px;
-  font: sans-serif;
-  height: 45px;
+	margin: 40px 20px 0px 20px;
+	font-size: 0;
+	line-height: 45px;
+	font: sans-serif;
+	height: 45px;
 }
 
 li {
-  display: inline;
+	display: inline;
 }
 
 .header > * {
-  display: inline-block;
-  font-size: 16px;
-  vertical-align: middle;
-  height: 100%;
-  line-height: 45px;
+	display: inline-block;
+	font-size: 16px;
+	vertical-align: middle;
+	height: 100%;
+	line-height: 45px;
 }
 
 .logo {
-  width: 15%;
+	width: 15%;
 }
 
 .navbar {
-  width: 70%;
-  text-align: left;
-  vertical-align: middle;
-  color: #025157;
-  font: sans-serif;
-  height: 45px;
+	width: 70%;
+	text-align: left;
+	vertical-align: middle;
+	color: #025157;
+	font: sans-serif;
+	height: 45px;
 }
 
 .actions {
-  width: 15%;
-  text-align: left;
-  font-size: 14px;
-  vertical-align: middle;
+	width: 15%;
+	text-align: left;
+	font-size: 14px;
+	vertical-align: middle;
 }
 
 .actions > * {
-  margin-right: 10px;
-  margin-left: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 .actions a {
-  color: #67b54b;
+	color: #67b54b;
 }
 
 .actions button {
-  color: white;
-  background-color: #67b54b;
-  padding: 12px 14px;
-  border: 0;
-  border-radius: 5px;
+	color: white;
+	background-color: #67b54b;
+	padding: 12px 14px;
+	border: 0;
+	border-radius: 5px;
 }
 
 .publish h3 {
-  font-family: "Impact", "Lucida Console";
-  font-size: 40px;
-  line-height: 48px;
-  color: #025157;
+	font-family: "Impact", "Lucida Console";
+	font-size: 40px;
+	line-height: 48px;
+	color: #025157;
 }
 
 .publish > p {
-  font-size: 16px;
-  color: #343434;
-  line-height: 1.5;
-  margin-bottom: 20px;
+	font-size: 16px;
+	color: #343434;
+	line-height: 1.5;
+	margin-bottom: 20px;
 }
 
 .publish > form {
-  display: flex;
+	display: flex;
 }
 
 .publish > form p {
-  color: #025157;
-  margin-right: 18px;
+	color: #025157;
+	margin-right: 18px;
+}
+
+.promo {
+    display: flex;
+    width: 70%;
+    margin: 100px auto;
+    align-items: center;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player img {
+    margin-top: 10px;
 }
