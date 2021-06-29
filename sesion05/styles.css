@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;900&display=swap");
+
+body {
+  margin: 0;
+}
+
+h1 {
+  color: #46484c;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 80px;
+}
+
+main {
+  margin-top: 250px;
+}
+
+p {
+  color: #8b8b8bcc;
+  font-family: verdana;
+  font-size: 20px;
+}
+
+button {
+  color: #fff;
+  background-color: #025157;
+}
+
+.fixed-header {
+  position: fixed;
+  background-color: #fffbf7;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.header {
+  margin: 40px 20px 0px 20px;
+  font-size: 0;
+  line-height: 45px;
+  font: sans-serif;
+  height: 45px;
+}
+
+li {
+  display: inline;
+}
+
+.header > * {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+  height: 100%;
+  line-height: 45px;
+}
+
+.logo {
+  width: 15%;
+}
+
+.navbar {
+  width: 70%;
+  text-align: left;
+  vertical-align: middle;
+  color: #025157;
+  font: sans-serif;
+  height: 45px;
+}
+
+.actions {
+  width: 15%;
+  text-align: left;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.actions > * {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.actions a {
+  color: #67b54b;
+}
+
+.actions button {
+  color: white;
+  background-color: #67b54b;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.publish h3 {
+  font-family: "Alegreya";
+  font-size: 40px;
+  line-height: 48px;
+  color: #025157;
+}
+
+.publish > p {
+  font-size: 16px;
+  color: #343434;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.publish > form {
+  display: flex;
+}
+
+.publish > form p {
+  color: #025157;
+  margin-right: 18px;
+}
+
+.promo {
+  display: flex;
+  width: 70%;
+  margin: 100px auto;
+  align-items: center;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player img {
+  margin-top: 10px;
+}
+
+.success-stories {
+  background-color: #a1d683;
+  display: flex;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.ecommerce {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 60px;
+  margin-right: 30px;
+}
+
+.ecommerce-button {
+  padding: 20px 12px 12px 12px;
+  width: 180px;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.success-stories h3 {
+  font-family: "Alegreya";
+  font-size: 51px;
+  line-height: 61px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #025157;
+}
+
+.ecommerce > p {
+  color: #343434;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.stories {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 25%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.story-photo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.stories .story-circle {
+  background-color: #f9da73;
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  bottom: -20px;
+  right: 30px;
+  height: 100px;
+  width: 76px;
+  padding-left: 12px;
+  padding-right: 12px;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+
+.stories h2 {
+  text-align: left;
+  padding: 18px;
+  color: #025157;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.stories h1 {
+  text-align: left;
+  padding: 18px;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.stories p {
+  text-align: left;
+  padding: 18px;
+}
+
+.stories .stories-button {
+  margin: 40px 20px;
+  padding: 20px 12px 12px 12px;
+  width: 180px;
+  border-radius: 8px;
+  align-self: center;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cart {
+  object-fit: contain;
+  height: 30px;
+  margin: 20px;
+}
+
+.features {
+  background-color: #025157;
+  padding: 5% 10%;
+  display: grid;
+  /* grid-template-columns: 300px 300px; */
+  /* grid-template-columns: repeat(2, 300px); */
+  grid-template: repeat(2, 330px) / repeat(2, 1fr);
+}
+
+.feature-card {
+  margin-bottom: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  color: #343434;
+  font-weight: 400;
+  text-align: left;
+}
+
+.feature-p {
+  font-size: 16px;
+  color: #7e7e7e;
+  font-weight: 400;
+  text-align: left;
+}
+
+.feature-link {
+  font-size: 16px;
+  color: #67b54b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.feature-icon {
+  width: 50px;
+}
+
+.feature-text {
+  flex-direction: column;
+  padding: 30px 20px 40px 40px;
+  width: 50%;
+}
+
+.feature-photo {
+  position: absolute;
+  left: 70%;
+  height: 80%;
+}
+
+.how-does-it-work {
+  background-color: #fffbf7;
+  padding: 5% 10%;
+  text-align: center;
+}
+
+.how-does-it-work h1 {
+  color: #025157;
+  font-size: 50px;
+  line-height: 60px;
+  font-family: "Alegreya", serif;
+  margin-bottom: 8px;
+}
+
+.how-does-it-work p {
+  max-width: 60%;
+  color: #46484c;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.how-does-it-work a {
+  color: #67b54b;
+  text-decoration: none;
+}
+
+.how-does-it-work button {
+  margin: 20px 20px;
+  padding: 20px 12px 12px 12px;
+  width: 180px;
+  border-radius: 8px;
+  align-self: center;
+}
+
+.steps {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.step-card {
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.step-card .step-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 20px;
+}
+
+.step-card .step-art {
+  height: 350px;
+  object-position: -30px;
+}
+
+.step-card .step-body {
+  padding: 25px;
+}
+
+.step-card .step-title {
+  font-size: 30px;
+}
+
+.step-card .step-text {
+  font-size: 15px;
+  max-width: 100%;
+}
+
+/** dispositivos móviles en vista viewport (vertical) */
+@media (max-width: 575px) {
+  .navbar, .actions {
+    display: none;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  main {
+    margin-top: 150px;
+  }
+}
+
+/** dispositivos pequeños en vista landscape (horizontal) */
+@media (min-width: 576px) and (max-width: 767px) {
+}
+
+/** dispositivos medianos (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/** dispositivos grandes (desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/** dispositivos extra grandes (monitores grandes, tvs) */
+@media (min-width: 1200px) {
+}
