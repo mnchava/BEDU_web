@@ -4,15 +4,23 @@ body {
   margin: 0;
 }
 
+main {
+  margin-top: 250px;
+}
+
 h1 {
   color: #46484c;
   text-align: center;
   font-size: 60px;
   margin-top: 80px;
+  font-family: "Alegreya";
+  color: #025157;
 }
 
-main {
-  margin-top: 250px;
+h4 {
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 p {
@@ -264,7 +272,7 @@ li {
   margin-right: 15px;
   background-color: #fff;
   border: 1px solid #dadada;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   position: relative;
@@ -319,7 +327,6 @@ li {
   color: #025157;
   font-size: 50px;
   line-height: 60px;
-  font-family: "Alegreya", serif;
   margin-bottom: 8px;
 }
 
@@ -390,7 +397,8 @@ li {
 
 /** dispositivos móviles en vista viewport (vertical) */
 @media (max-width: 575px) {
-  .navbar, .actions {
+  .navbar,
+  .actions {
     display: none;
   }
 
@@ -400,6 +408,42 @@ li {
 
   main {
     margin-top: 150px;
+  }
+
+  .banner > img {
+    width: 100%;
+  }
+
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signup-form > input {
+    width: 65%;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  .promo {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .player > video {
+    width: 100%;
+  }
+
+  .publish > h3 {
+    line-height: 1.2;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    grid-template: none;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
