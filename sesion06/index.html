@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Retos Sesion 04</title>
+    <title>Retos Sesion 06</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <link rel="StyleSheet" href="./styles.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
   <body>
-    <section class="fixed-header">
+    <!-- <section class="fixed-header">
       <header class="header">
         <a href="./index.html" class="logo">
           <img
@@ -31,7 +37,51 @@
           <button class="trial">Start free trial</button>
         </div>
       </header>
-    </section>
+    </section> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://getmatcha.com/wp-content/themes/getmatcha/img/footer_logo.svg"
+          alt="Matcha"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Platform</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a>Sign In</a>
+          <button>Start free trial</button>
+        </form>
+      </div>
+    </nav>
 
     <main>
       <h1>Build your blog. Build your business.</h1>
@@ -41,34 +91,51 @@
       </h4>
 
       <form action="" class="signup-form">
-        <label for="name">Nombre</label>
-        <input type="text" id="name" name="nombre" placeholder="Nombre" />
-        <input
-          type="text"
-          id="lastname"
-          name="apellido"
-          placeholder="Apellido"
-        />
-        <input
-          type="number"
-          id="age"
-          name="edad"
-          min="18"
-          max="35"
-          placeholder="Edad"
-        />
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Correo"
-        />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Contraseña"
-        />
+        <div class="input-group nombre" style="width: 50%; margin-bottom: 16px">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Nombre y apellido</span>
+          </div>
+          <input type="text" aria-label="Primer nombre" class="form-control" />
+          <input type="text" aria-label="Apellido" class="form-control" />
+        </div>
+
+        <div
+          class="input-group flex-nowrap"
+          style="width: 50%; margin-bottom: 16px; justify-content: center"
+        >
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="addon-wrapping">Edad</span>
+          </div>
+          <input
+            type="number"
+            class="form-control"
+            min="18"
+            max="35"
+            placeholder="18"
+            aria-label="Edad"
+            style="margin-right: 5px; max-width: 80px"
+            aria-describedby="addon-wrapping"
+          />
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="addon-wrapping">Correo</span>
+          </div>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="correo@dominio.com"
+            aria-label="Correo"
+            style="max-width: 40%"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+
+        <div class="input-group nombre" style="width: 30%; margin-bottom: 16px">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Contraseña</span>
+          </div>
+          <input type="password" aria-label="Pwd" class="form-control" />
+        </div>
+
         <button type="submit">Enviar</button>
       </form>
 
@@ -230,32 +297,111 @@
         />
       </article>
       <article class="stories">
-        <img
-          src="https://getmatcha.com/wp-content/uploads/2019/05/profile-headshot-square.png"
-          alt="story-photo"
-          class="story-photo"
-        />
-        <img
-          src="https://getmatcha.com/wp-content/uploads/2019/05/everly_logo_blue_v3_x60@2x.png"
-          alt="story-logo"
-          class="story-circle"
-          width="80px"
-          ;
-        />
-        <h2>Everly</h2>
-        <h1>
-          Early-Stage CPG Brand Increases Lead Conversion 20x, Ecommerce Revenue
-          20%
-        </h1>
-        <div class="benefits">
-          <img
-            src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_cart.png"
-            alt="cart"
-            class="cart"
-          />
-          <p>22% of monthly revenue influenced by content</p>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="2500">
+              <img
+                src="https://getmatcha.com/wp-content/uploads/2019/05/profile-headshot-square.png"
+                alt="story-photo"
+                class="story-photo d-block"
+              />
+              <img
+                src="https://getmatcha.com/wp-content/uploads/2019/05/everly_logo_blue_v3_x60@2x.png"
+                alt="story-logo"
+                class="story-circle"
+                width="80px"
+              />
+              <h2>Everly</h2>
+              <h1>
+                Early-Stage CPG Brand Increases Lead Conversion 20x, Ecommerce
+                Revenue 20%
+              </h1>
+              <div class="benefits">
+                <img
+                  src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_cart.png"
+                  alt="cart"
+                  class="cart"
+                />
+                <p>22% of monthly revenue influenced by content</p>
+              </div>
+              <button type="button" class="stories-button">
+                See Case Study
+              </button>
+            </div>
+            <div class="carousel-item" data-interval="2500">
+              <img
+                src="https://getmatcha.com/wp-content/uploads/2019/08/0.jpg"
+                alt="story-photo"
+                class="story-photo d-block"
+              />
+
+              <img
+                src="https://getmatcha.com/wp-content/uploads/2019/08/SeatoSummitLogo.png"
+                alt="story-logo"
+                class="story-circle"
+                width="80px"
+              />
+              <h2>Sea to Summit</h2>
+              <h1>
+                Sea to Summit’s Ecommerce Site Traffic Climbs 189%, New
+                Subscribers 820%
+              </h1>
+              <div class="benefits">
+                <img
+                  src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_audiences.png"
+                  alt="cart"
+                  class="cart"
+                />
+                <p>500% increase in traffic from social media</p>
+              </div>
+              <button type="button" class="stories-button">
+                See Case Study
+              </button>
+            </div>
+            <div class="carousel-item" data-interval="2500">
+              <img
+                src="https://getmatcha.com/wp-content/uploads/2019/06/matt-and-margaret_headshot.png"
+                alt="story-photo"
+                class="story-photo d-block"
+              />
+
+              <img
+                src="https://getmatcha.com/wp-content/uploads/2019/06/mambe-logo-1.png"
+                alt="story-logo"
+                class="story-circle"
+                width="80px"
+              />
+              <h2>Mambe Waterproof Blankets</h2>
+              <h1>
+                How Mambe Increased Conversions by 327%, Reduced CPL by 60%
+              </h1>
+              <div class="benefits">
+                <img
+                  src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_target.png"
+                  alt="cart"
+                  class="cart"
+                />
+                <p>+327% more popup conversions at a 60% lower cost</p>
+              </div>
+              <button type="button" class="stories-button">
+                See Case Study
+              </button>
+            </div>
+          </div>
         </div>
-        <button type="button" class="stories-button">See Case Study</button>
       </article>
     </section>
 
@@ -350,5 +496,21 @@
         </div>
       </article>
     </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
