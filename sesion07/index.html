@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Retos Sesion 06</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="StyleSheet" href="./styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
+
+  <body>
+    <!-- <section class="fixed-header">
+      <header class="header">
+        <a href="./index.html" class="logo">
+          <img
+            src="https://getmatcha.com/wp-content/themes/getmatcha/img/footer_logo.svg"
+            alt="logo"
+          />
+        </a>
+        <nav class="navbar">
+          <ul>
+            <li>Platform</li>
+            <li>Pricing</li>
+            <li>Customers</li>
+            <li>Resources</li>
+            <li>About</li>
+          </ul>
+        </nav>
+        <div class="actions">
+          <a href="./login.html" class="login"> Login </a>
+          <button class="trial">Start free trial</button>
+        </div>
+      </header>
+    </section> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://getmatcha.com/wp-content/themes/getmatcha/img/footer_logo.svg"
+          alt="Matcha"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Platform</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a>Sign In</a>
+          <button>Start free trial</button>
+        </form>
+      </div>
+    </nav>
+
+    <main>
+      <h1>Build your blog. Build your business.</h1>
+      <h4>
+        Instantly publish articles, drive more traffic, grow your email list,
+        and see your blog’s impact on sales.
+      </h4>
+
+      <form action="" class="signup-form">
+        <div class="input-group nombre" style="width: 50%; margin-bottom: 16px">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Nombre y apellido</span>
+          </div>
+          <input type="text" aria-label="Primer nombre" class="form-control" />
+          <input type="text" aria-label="Apellido" class="form-control" />
+        </div>
+
+        <div
+          class="input-group flex-nowrap"
+          style="width: 50%; margin-bottom: 16px; justify-content: center"
+        >
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="addon-wrapping">Edad</span>
+          </div>
+          <input
+            type="number"
+            class="form-control"
+            min="18"
+            max="35"
+            placeholder="18"
+            aria-label="Edad"
+            style="margin-right: 5px; max-width: 80px"
+            aria-describedby="addon-wrapping"
+          />
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="addon-wrapping">Correo</span>
+          </div>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="correo@dominio.com"
+            aria-label="Correo"
+            style="max-width: 40%"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+
+        <div class="input-group nombre" style="width: 30%; margin-bottom: 16px">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Contraseña</span>
+          </div>
+          <input type="password" aria-label="Pwd" class="form-control" />
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <figure class="banner">
+        <img
+          src="https://getmatcha.com/wp-content/themes/getmatcha/img/capterra.png"
+          alt="Capterra"
+        />
+      </figure>
+    </main>
+
+    <section class="promo">
+      <div class="player">
+        <video
+          controls
+          poster="https://cdn.videvo.net/videvo_files/video/premium/video0036/thumbnails/computer_code00_small.jpg"
+        >
+          <source
+            type="video/webm"
+            src="https://cdn.videvo.net/videvo_files/video/premium/video0036/small_watermarked/computer_code00_preview.webm"
+          />
+          <source
+            type="video/mp4"
+            src="https://cdn.videvo.net/videvo_files/video/premium/video0036/small_watermarked/computer_code00_preview.mp4"
+          />
+        </video>
+        <img
+          src="https://getmatcha.com/wp-content/themes/getmatcha/img/see_how_it_works.png"
+          alt="see how it works"
+          width="150px"
+        />
+      </div>
+
+      <article class="publish">
+        <h3>Publish to your blog in minutes, not hours.</h3>
+        <p>
+          Your blog is your most powerful asset to build, engage, and retain a
+          loyal audience. But you don’t have hours to create content that may or
+          may not work. With Matcha, instantly publish from our library of
+          10,000+ professionally written articles and build your email list
+          faster with our powerful conversion tool.
+        </p>
+        <form>
+          <p>Start publishing today:</p>
+          <input type="text" placeholder="Enter email" />
+          <button>Start My Trial</button>
+        </form>
+      </article>
+    </section>
+
+    <section class="features">
+      <article class="feature-card">
+        <div class="feature-text">
+          <img
+            src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_publish.png"
+            class="feature-icon"
+            alt="feature-icon"
+          />
+          <h1 class="feature-title">Fill your blog with engaging articles.</h1>
+          <p class="feature-p">
+            Publish to your blog in less time than it takes to drink your
+            morning coffee.
+          </p>
+          <a href="https://bedu-fef.netlify.app/" class="feature-link"
+            >Publish instantly →</a
+          >
+        </div>
+        <img
+          src="https://getmatcha.com/wp-content/themes/getmatcha/img/image_publish.png"
+          class="feature-photo"
+          alt="feature-photo"
+        />
+      </article>
+      <article class="feature-card">
+        <div class="feature-text">
+          <img
+            src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_site_traffic.png"
+            class="feature-icon"
+            alt="feature-icon"
+          />
+          <h1 class="feature-title">
+            Attract and engage more website visitors.
+          </h1>
+          <p class="feature-p">
+            Publish to your blog in less time than it takes to drink your
+            morning coffee.
+          </p>
+          <a href="https://bedu-fef.netlify.app/" class="feature-link"
+            >Publish instantly →</a
+          >
+        </div>
+        <img
+          src="https://getmatcha.com/wp-content/themes/getmatcha/img/image_site_traffic.png"
+          class="feature-photo"
+          alt="feature-photo"
+        />
+      </article>
+      <article class="feature-card">
+        <div class="feature-text">
+          <img
+            src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_capture.png"
+            class="feature-icon"
+            alt="feature-icon"
+          />
+          <h1 class="feature-title">
+            Capture more emails with locked content.
+          </h1>
+          <p class="feature-p">
+            Publish to your blog in less time than it takes to drink your
+            morning coffee.
+          </p>
+          <a href="https://bedu-fef.netlify.app/" class="feature-link"
+            >Publish instantly →</a
+          >
+        </div>
+        <img
+          src="https://getmatcha.com/wp-content/themes/getmatcha/img/image_capture.png"
+          class="feature-photo"
+          alt="feature-photo"
+        />
+      </article>
+      <article class="feature-card">
+        <div class="feature-text">
+          <img
+            src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_roi.png"
+            class="feature-icon"
+            alt="feature-icon"
+          />
+          <h1 class="feature-title">Optimize your blog’s performance.</h1>
+          <p class="feature-p">
+            Publish to your blog in less time than it takes to drink your
+            morning coffee.
+          </p>
+          <a href="https://bedu-fef.netlify.app/" class="feature-link"
+            >Publish instantly →</a
+          >
+        </div>
+        <img
+          src="https://getmatcha.com/wp-content/themes/getmatcha/img/image_roi.png"
+          class="feature-photo"
+          alt="feature-photo"
+        />
+      </article>
+    </section>
+
+    <section class="success-stories">
+      <article class="ecommerce">
+        <h3>Growing ecommerce brands rely on Matcha.</h3>
+        <p>
+          Are you tired of wasting time publishing blog articles to only see a
+          trickle of traffic and no impact on sales? Join hundreds of business
+          owners and ecommerce marketers who rely on Matcha for quality content
+          and consistent performance from their blogs.
+        </p>
+        <button type="button" class="ecommerce-button">Who Uses Matcha?</button>
+        <img
+          src="https://getmatcha.com/wp-content/uploads/2019/09/brands_group.png"
+          alt="logos"
+        />
+      </article>
+      <article class="stories">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="2500">
+              <img
+                src="https://getmatcha.com/wp-content/uploads/2019/05/profile-headshot-square.png"
+                alt="story-photo"
+                class="story-photo d-block"
+              />
+              <img
+                src="https://getmatcha.com/wp-content/uploads/2019/05/everly_logo_blue_v3_x60@2x.png"
+                alt="story-logo"
+                class="story-circle"
+                width="80px"
+              />
+              <h2>Everly</h2>
+              <h1>
+                Early-Stage CPG Brand Increases Lead Conversion 20x, Ecommerce
+                Revenue 20%
+              </h1>
+              <div class="benefits">
+                <img
+                  src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_cart.png"
+                  alt="cart"
+                  class="cart"
+                />
+                <p>22% of monthly revenue influenced by content</p>
+              </div>
+              <button type="button" class="stories-button">
+                See Case Study
+              </button>
+            </div>
+            <div class="carousel-item" data-interval="2500">
+              <img
+                src="https://getmatcha.com/wp-content/uploads/2019/08/0.jpg"
+                alt="story-photo"
+                class="story-photo d-block"
+              />
+
+              <img
+                src="https://getmatcha.com/wp-content/uploads/2019/08/SeatoSummitLogo.png"
+                alt="story-logo"
+                class="story-circle"
+                width="80px"
+              />
+              <h2>Sea to Summit</h2>
+              <h1>
+                Sea to Summit’s Ecommerce Site Traffic Climbs 189%, New
+                Subscribers 820%
+              </h1>
+              <div class="benefits">
+                <img
+                  src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_audiences.png"
+                  alt="cart"
+                  class="cart"
+                />
+                <p>500% increase in traffic from social media</p>
+              </div>
+              <button type="button" class="stories-button">
+                See Case Study
+              </button>
+            </div>
+            <div class="carousel-item" data-interval="2500">
+              <img
+                src="https://getmatcha.com/wp-content/uploads/2019/06/matt-and-margaret_headshot.png"
+                alt="story-photo"
+                class="story-photo d-block"
+              />
+
+              <img
+                src="https://getmatcha.com/wp-content/uploads/2019/06/mambe-logo-1.png"
+                alt="story-logo"
+                class="story-circle"
+                width="80px"
+              />
+              <h2>Mambe Waterproof Blankets</h2>
+              <h1>
+                How Mambe Increased Conversions by 327%, Reduced CPL by 60%
+              </h1>
+              <div class="benefits">
+                <img
+                  src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_target.png"
+                  alt="cart"
+                  class="cart"
+                />
+                <p>+327% more popup conversions at a 60% lower cost</p>
+              </div>
+              <button type="button" class="stories-button">
+                See Case Study
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="how-does-it-work">
+      <h1>How does Matcha work?</h1>
+      <p>
+        Your blog can be so much more than window dressing. Use Matcha’s
+        <a href="https://bedu-fef.netlify.app/">simple formula</a>
+        to transform your blog into an ecommerce growth engine.
+      </p>
+      <button>Explore the Platform</button>
+      <article class="steps">
+        <div class="step-card">
+          <img
+            src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_content.png"
+            alt="step-icon"
+            class="step-icon"
+          />
+          <img
+            src="https://getmatcha.com/wp-content/themes/getmatcha/img/ill-publish.png"
+            alt="step-art"
+            class="step-art"
+          />
+          <div class="step-body">
+            <h1 class="step-title">Publish</h1>
+            <p class="step-text">
+              Effortlessly fill your blog with content that shoppers want to
+              read.
+            </p>
+            <a href="" class="step-link">Publish instantly →</a>
+          </div>
+        </div>
+        <div class="step-card">
+          <img
+            src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_channels.png"
+            alt="step-icon"
+            class="step-icon"
+          />
+          <img
+            src="https://getmatcha.com/wp-content/themes/getmatcha/img/ill-promote.png"
+            alt="step-art"
+            class="step-art"
+          />
+          <div class="step-body">
+            <h1 class="step-title">Promote</h1>
+            <p class="step-text">
+              Use articles in email, social, and content ads to attract more
+              site visitors.
+            </p>
+            <a href="" class="step-link">Drive more site visitors →</a>
+          </div>
+        </div>
+        <div class="step-card">
+          <img
+            src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_funnel.png"
+            alt="step-icon"
+            class="step-icon"
+          />
+          <img
+            src="https://getmatcha.com/wp-content/themes/getmatcha/img/ill-capture.png"
+            alt="step-art"
+            class="step-art"
+          />
+          <div class="step-body">
+            <h1 class="step-title">Capture</h1>
+            <p class="step-text">
+              Turn readers into email subscribers and subscribers into
+              customers.
+            </p>
+            <a href="" class="step-link">Grow your email list →</a>
+          </div>
+        </div>
+        <div class="step-card">
+          <img
+            src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_chart.png"
+            alt="step-icon"
+            class="step-icon"
+          />
+          <img
+            src="https://getmatcha.com/wp-content/themes/getmatcha/img/ill-measure.png"
+            alt="step-art"
+            class="step-art"
+          />
+          <div class="step-body">
+            <h1 class="step-title">Measure</h1>
+            <p class="step-text">
+              See what’s working and what’s not to easily optimize for more
+              traffic, email subscribers, and sales.
+            </p>
+            <a href="" class="step-link">Track performance → </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
