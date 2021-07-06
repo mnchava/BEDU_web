@@ -252,9 +252,9 @@ li {
   align-self: center;
 }
 
-/* .input-group, .nombre {
-  width: 50;
-} */
+.stories > .logos {
+  width: 70%;
+}
 
 .benefits {
   display: flex;
