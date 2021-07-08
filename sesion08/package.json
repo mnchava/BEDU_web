@@ -1,0 +1,22 @@
+{
+  "name": "sesion08",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnchava/BEDU_web.git"
+  },
+  "author": "Jesus Salvador Uribe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnchava/BEDU_web/issues"
+  },
+  "homepage": "https://github.com/mnchava/BEDU_web#readme",
+  "dependencies": {
+    "sass": "^1.35.2"
+  },
+  "description": ""
+}
