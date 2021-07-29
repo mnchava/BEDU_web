@@ -25,7 +25,7 @@ function deepEqual(a, b) {
     return true;
   } else if (
     (typeof a == "object" && typeof b !== "object") ||
-    (typeof b == "object" && typeof a !== "object")
+    (typeof a !== "object" && typeof b == "object")
   ) {
     return false;
   } else {
@@ -79,24 +79,24 @@ console.log(
 );
 
 function frequency(string) {
-  let res = {};
+  let counter = {};
 
   for (let i = 0; i < string.length; i++) {
-    if (string[i] in res) {
-      res[string[i]] += 1;
+    if (string[i] in counter) {
+      counter[string[i]] += 1;
     } else {
-      res[string[i]] = 1;
+      counter[string[i]] = 1;
     }
   }
 
-  const sortedKeys = Object.keys(res).sort();
-  let sortedRes = {};
+  const sortedKeys = Object.keys(counter).sort();
+  let sorted = {};
 
   for (let i = 0; i < sortedKeys.length; i++) {
-    sortedRes[sortedKeys[i]] = res[sortedKeys[i]];
+    sorted[sortedKeys[i]] = counter[sortedKeys[i]];
   }
 
-  return JSON.stringify(sortedRes);
+  return sorted;
 }
 
 console.log("Test 1:", frequency("cccbbbaaa"));
