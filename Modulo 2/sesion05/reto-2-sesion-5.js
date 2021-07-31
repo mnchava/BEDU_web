@@ -8,18 +8,11 @@ function createPhoneNumber(numbers) {
 
 	if (numbers.length == 10) {
 		res.push("(");
-		res.push(numbers[0]);
-		res.push(numbers[1]);
-		res.push(numbers[2]);
+		res.push(numbers[0], numbers[1], numbers[2]);
 		res.push(") ");
-		res.push(numbers[3]);
-		res.push(numbers[4]);
-		res.push(numbers[5]);
+		res.push(numbers[3], numbers[4], numbers[5]);
 		res.push("-");
-		res.push(numbers[6]);
-		res.push(numbers[7]);
-		res.push(numbers[8]);
-		res.push(numbers[9]);
+		res.push(numbers[6], numbers[7], numbers[8], numbers[9]);
 
 		console.log(res.join(''));
 	}
