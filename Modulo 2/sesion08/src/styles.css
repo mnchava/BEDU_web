@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+  font-style: italic;
+  font-weight: 900;
+  color: purple;
+  background-color: white;
+}
+
+body {
+  background-image: url(./images/homer.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
