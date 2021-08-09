@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ejemplo 2: Cambiando el DOM</title>
+  </head>
+  <body>
+    <p>One</p>
+    <p>Two</p>
+    <p>Three</p>
+
+    <script>
+      const paragraphs = document.body.getElementsByTagName("p");
+
+      console.log("Colección de nodos: ", paragraphs);
+
+      console.log("Primer nodo: ", paragraphs[0]);
+      console.log("Segundo nodo: ", paragraphs[1]);
+      console.log("Tercer nodo: ", paragraphs[2]);
+    </script>
+  </body>
+</html>
