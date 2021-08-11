@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>Reto 1: Inflar un globo</title>
+  </head>
+  <body>
+    <p id="globo">🎈</p>
+
+    <script>
+      //    Reto 1: Inflar un globo
+      // En este reto el globo (🎈) debe inflarse un 10% al presionar la flecha hacia arriba y desinflarse un 10% el presionar la flecha hacia abajo. El valor inicial debe ser de 20px.
+
+      // Con el método preventDefault() podemos evitar que la página haga un scroll al presionar estas teclas.
+
+      const globo = document.getElementById("globo");
+      globo.style.textAlign = "center";
+      globo.style.fontSize = "20px";
+      document.body.style.backgroundColor = "black";
+      let newSize = 20;
+
+      const inflar = function () {
+        if (newSize > 80) {
+          // Por último, si el tamaño del globo es mayor a 80px se debe reemplazar por el emoji 💥 y eliminar el event handler.
+          console.log("boom");
+          globo.textContent = "💥";
+          document.removeEventListener("keydown", tecla);
+        } else {
+          newSize *= 1.1;
+          globo.style.fontSize = newSize + "px";
+          console.log("^" + globo.style.fontSize);
+        }
+      };
+
+      const desinflar = function () {
+        newSize *= 0.9;
+        globo.style.fontSize = newSize + "px";
+        console.log("v" + globo.style.fontSize);
+      };
+
+      const tecla = function (event) {
+        event.preventDefault();
+        if (event.key == "ArrowUp") {
+          inflar();
+        }
+
+        if (event.key == "ArrowDown") {
+          desinflar();
+        }
+      };
+
+      document.addEventListener("keydown", tecla);
+    </script>
+  </body>
+</html>
