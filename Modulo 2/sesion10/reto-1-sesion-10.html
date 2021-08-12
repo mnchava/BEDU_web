@@ -16,36 +16,29 @@
       const globo = document.getElementById("globo");
       globo.style.textAlign = "center";
       globo.style.fontSize = "20px";
+      globo.style.position = "absolute";
       document.body.style.backgroundColor = "black";
       let newSize = 20;
-
-      const inflar = function () {
-        if (newSize > 80) {
-          // Por último, si el tamaño del globo es mayor a 80px se debe reemplazar por el emoji 💥 y eliminar el event handler.
-          console.log("boom");
-          globo.textContent = "💥";
-          document.removeEventListener("keydown", tecla);
-        } else {
-          newSize *= 1.1;
-          globo.style.fontSize = newSize + "px";
-          console.log("^" + globo.style.fontSize);
-        }
-      };
-
-      const desinflar = function () {
-        newSize *= 0.9;
-        globo.style.fontSize = newSize + "px";
-        console.log("v" + globo.style.fontSize);
-      };
 
       const tecla = function (event) {
         event.preventDefault();
         if (event.key == "ArrowUp") {
-          inflar();
+          if (newSize > 80) {
+            // Por último, si el tamaño del globo es mayor a 80px se debe reemplazar por el emoji 💥 y eliminar el event handler.
+            console.log("boom");
+            globo.textContent = "💥";
+            document.removeEventListener("keydown", tecla);
+          } else {
+            newSize *= 1.1;
+            globo.style.fontSize = newSize + "px";
+            console.log("^" + globo.style.fontSize);
+          }
         }
 
         if (event.key == "ArrowDown") {
-          desinflar();
+          newSize *= 0.9;
+          globo.style.fontSize = newSize + "px";
+          console.log("v" + globo.style.fontSize);
         }
       };
 

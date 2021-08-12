@@ -13,16 +13,16 @@ const node = document.getElementById("tab-panel");
 
 function createTabs(node) {
   node.style.textAlign = "center";
-  const tabs = Array.from(node.children).map((child) => {
+  const tabs = [...node.children].map((child) => {
     const boton = document.createElement("button");
     boton.textContent = child.getAttribute("data-tabname");
     boton.style = "padding: 5px 8px; margin: 0 5px;";
-
+    
     const tab = {
       tag: child,
       button: boton,
     }
-
+    
     boton.addEventListener("click", () => select(tab));
 
     return tab;
