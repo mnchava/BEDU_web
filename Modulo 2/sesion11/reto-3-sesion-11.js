@@ -8,13 +8,25 @@
 
 // Don't alter this function
 const processAction = (i, callback) => {
-  setTimeout(function() {
+  setTimeout(function () {
     callback("Processed Action " + i);
-  }, Math.random()*1000);
+  }, Math.random() * 1000);
+};
+
+async function triggerActions(count) {
+  let done = [];
+
+  for (let i = 0; i < count; i++) {
+    done[i] = new Promise((resolve) => {
+      processAction(i, resolve);
+    });
+  }
+
+  Promise.all(done).then(function (result) {
+    result.forEach((value) => {
+      console.log(value);
+    });
+  });
 }
 
-const triggerActions = (count) => {
-  // Code goes here
-}
-
-triggerActions(5);
+triggerActions(10);
