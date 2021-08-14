@@ -5,20 +5,17 @@
 
 function promiseAll(promises) {
 	return new Promise((resolve, reject) => {
+    if (promises.length == 0) resolve([]);
+    
 		let done = [];
 		let missing = promises.length;
 
 		for (let i = 0; i < missing; i++) {
 			promises[i].then(result => {
-				done[i] = result;
+        done[i] = result;
 				missing--;
-				if (missing === 0) {
-					resolve(done)
-				}
+				if (missing == 0) resolve(done);
 			}).catch(reject);
-		}
-		if (promises.length === 0) {
-			resolve(done)
 		}
 	});
 }
