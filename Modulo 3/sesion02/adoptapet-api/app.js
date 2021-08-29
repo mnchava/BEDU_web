@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 const PORT = 4001;
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
@@ -13,6 +17,14 @@ const gods = {
 
 app.get("/gods", (req, res, next) => {
   res.send(gods);
+});
+
+app.get("/gods/:name", (req, res, next) => {
+  if (gods[req.params.name]) {
+    res.send(gods[req.params.name]);
+  } else {
+    res.status(404).send("God Not Found");
+  }
 });
 
 const constelaciones = {
@@ -48,86 +60,53 @@ const constelaciones = {
   },
 };
 
-app.get("/gods/:name", (req, res, next) => {
-  if (gods[req.params.name]) {
-    res.send(gods[req.params.name]);
+app.post('/constelaciones/:name', (req, res) => {
+  const name = req.params.name;
+  const body = req.body;
+
+	if (constelaciones[name]) {
+		res.status(409).send('Ya existe una constelacion con ese nombre.');
+	}
+
+  constelaciones[name] = body;
+  res.status(200).send(constelaciones);
+});
+
+app.get("/constelaciones/search", (req, res) => {
+  const search = req.query;
+
+  if (Object.keys(search).length == 0) {
+    res.send(constelaciones);
   } else {
-    res.status(404).send("God Not Found");
+		const filter = Object.keys(search)[0];
+		const value = Object.values(search)[0];
+
+		for (constelacion in constelaciones) {
+			if (constelaciones[constelacion][filter] == value) res.send(constelaciones[constelacion]);
+		}
+		res.status(404).send('Esa constelacion no existe');
+
   }
 });
 
-app.get("/constelaciones/", (req, res, next) => {
-  if (req.query === {}) res.send(constelaciones);
-
-  const search = req.query;
-
-  if ("nombre" in search) {
-    if (constelaciones[search.name]) {
-      res.send(constelaciones[search.name]);
-    } else {
-      res.status(404).send("Esa constelacion no existe");
-    }
-  } else if ("abreviatura" in search) {
-		let found;
-
-		Object.keys(constelaciones).forEach((constelacion) => {
-			const abv = constelaciones[constelacion]['abreviatura']
-			if (abv == search["abreviatura"]) {
-				found = constelaciones[constelacion];
-			}
-		});
-
-		if (found) {
-			res.send(found);
-		} else {
-			res.status(404).send("Esa constelacion no existe");
-		}
-  } else if ("superficie" in search) {
-		let found;
-
-		Object.keys(constelaciones).forEach((constelacion) => {
-			const sup = constelaciones[constelacion]['superficie']
-			if (sup == search["superficie"]) {
-				found = constelaciones[constelacion];
-			}
-		});
-
-		if (found) {
-			res.send(found);
-		} else {
-			res.status(404).send("Esa constelacion no existe");
-		}
-  } else if ("num_estrellas" in search) {
-		let found;
-
-		Object.keys(constelaciones).forEach((constelacion) => {
-			const estrellas = constelaciones[constelacion]['num_estrellas']
-			if (estrellas == search["num_estrellas"]) {
-				found = constelaciones[constelacion];
-			}
-		});
-
-		if (found) {
-			res.send(found);
-		} else {
-			res.status(404).send("Esa constelacion no existe");
-		}
-  } else if ("estr_mas_brillante" in search) {
-		let found;
-
-		Object.keys(constelaciones).forEach((constelacion) => {
-			const estrella = constelaciones[constelacion]['estr_mas_brillante']
-			if (estrella == search["estr_mas_brillante"]) {
-				found = constelaciones[constelacion];
-			}
-		});
-
-		if (found) {
-			res.send(found);
-		} else {
-			res.status(404).send("Esa constelacion no existe");
-		}
+app.put('/constelaciones/', (req, res) => {
+  const name = req.query.name;
+  const body = req.body;
+	
+	if (constelaciones[name]){
+		constelaciones[name] = body;
+		res.send(constelaciones)
   } else {
-    res.status(404).send("Parametro de busqueda no existe");
+    res.status(404).send('Esa constelacion no existe');
+  }
+});
+
+app.delete('/constelaciones/:name', (req, res) => {
+	const name = req.params.name;
+
+  if (delete constelaciones[name]){
+    res.send(constelaciones)
+  } else {
+    res.status(500)
   }
 });
