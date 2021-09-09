@@ -26,5 +26,5 @@ module.exports = {
   crearUsuario,
   obtenerUsuarios,
   modificarUsuario,
-  eliminarUsuario,
+  eliminarUsuario
 };

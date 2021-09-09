@@ -1,3 +1,5 @@
+const URI = require('./private');
+
 const express = require("express");
 const app = express();
 
@@ -6,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://adminBEDU:1701@bedu-web.3qryh.mongodb.net/Adoptapet?retryWrites=true&w=majority");
+mongoose.connect(URI.MongoURI);
 mongoose.set("debug", true);
 
 const PORT = 4001;
